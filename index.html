@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><!-- Providencia informações gerais (metadados) sobre o documento -->
+    <meta charset="UTF-8"><!-- UTF-8 (UCS Transformation Format 8) Codificação de caracteres mais comum da World Wide Web (WWW). -->    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Meta exclusiva para Internet Explorer (introduzido no IE8), 
+        configura a página para ser renderizada como em outra versão do Internet Explorer.-->   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- "viewport" controla como o site é exibido em um dispositivo móvel.-->
+    <link rel="stylesheet" href="style.css"> <!-- Linka o CSS com o HTML --> <!-- CSS - Cascading Style Sheets-->
+    <title>Formulário de Clientes</title><!-- Título para a determinada página. -->
+</head>
+<body><!-- Define o corpo do documento -->
+    <div class="box">
+        <form action="config.php" method="POST"><!-- Form = cria um bloco para que tags de formulário e seus dados sejam agrupados e encaminhados para outro documento, em conjunto. 
+         método(method) POST esta sendo usado para postar dados de formulários. -->
+<fieldset> <!-- Usado para agrupar elementos, assim como labels ( <label> ), dentro de um formulário web. -->
+    <legend><b>Formulário de Clientes</b></legend> <!-- Rótulo para o conteúdo do seu ancestral <fieldset>  -->
+    <br> <!-- Quebra Linha -->
+    <div class="inputBox">  <!-- div - Container genérico para conteúdo de fluxo -->
+        <input type="text" name="nome" id="nome" class="inputUser" required> <!-- Input é usado para interação com o cliente no caso desse escrever um texto(nome da pessoa). -->
+        <label class="labelInput" for="nome">Nome completo</label> <!-- Label é usado para a legenda de um item, no caso desse legenda "NOME COMPLETO"-->
+    </div>
+    <br><br><!-- Quebra Duas Linhas -->
+    <div class="inputBox">
+        <input type="text" name="email" id="email" class="inputUser" required><!-- Input para informar o email -->
+        <label class="labelInput" for="nome">Email</label><!-- Legenda "EMAIL" -->
+    </div>
+    <br><br>
+    <div class="inputBox">
+        <input type="tel" name="telefone" id="telefone" class="inputUser" required><!-- Input para informar o telefone -->
+        <label class="labelInput" for="telefone">Telefone</label><!-- Legenda "Telefone" -->
+    </div>
+    <p>Sexo:</p>
+    <input type="radio" id="feminino" name="sexo" value="feminino" required><!-- Input do tipo "radio" ou seja uma bolinha para marcar -->
+    <label for="feminino">Feminino</label>  <!-- "For" aumenta a area do click na label, label (feminino) -->
+    <br>
+    <input type="radio" id="masculino" name="sexo" value="masculino" required><!-- Input do tipo "radio" ou seja uma bolinha para marcar -->
+    <label for="masculino">Masculino</label> <!-- "For" aumenta a area do click na label, label (masculino) -->
+    <br>
+    <input type="radio" id="outro" name="sexo" value="outro" required><!-- Input do tipo "radio" ou seja uma bolinha para marcar -->
+    <label for="outro">Outro</label> <!-- "For" aumenta a area do click na label, label (outro) -->
+    <br><br>
+    
+        <label for="data_Nasc"><b>Data de Nascimento:</b></label><!-- Label "Data de Nascimento" -->
+        <input type="date" name="data_Nasc" id="data_Nasc" required><!-- Input type "date" ou data (Calendario). -->
+
+    <br><br>
+    <div class="inputBox">
+        <input type="text" name="cidade" id="cidade" class="inputUser" required><!-- Input para informar a cidade-->
+        <label class="labelInput" for="cidade">Cidade</label><!-- "For" aumenta a area do click na label, label (outro) -->
+    </div>
+    <br><br>
+    <div class="inputBox">
+        <input type="text" name="estado" id="estado" class="inputUser" required><!-- Input para informar o estado -->
+        <label class="labelInput" for="estado">Estado</label><!-- "For" aumenta a area do click na label, label (outro) -->
+    </div>
+    <br><br>
+    <div class="inputBox">
+        <input type="text" name="endereco" id="endereco" class="inputUser" required><!-- Input para informar o endereço -->
+        <label class="labelInput" for="endereco">Endereço</label><!-- "For" aumenta a area do click na label, label (outro) -->
+    </div>
+    <br><br>
+    <div class="inputBox">
+        <input type="text" name="complemento" id="complemento" class="inputUser" required><!-- Input para informar o complemento -->
+        <label class="labelInput" for="complemento">Complemento</label><!-- "For" aumenta a area do click na label, label (outro) -->
+    </div>
+    <br><br>
+    <button onclick="Verificar()" type="submit" name="submit" id="submit"><!-- botao quando for clicado vai executar a funçao Verificar, type=submit para enviar os dados atraves do metodo POST -->
+
+</fieldset>
+        </form>
+    </div>
+    <script src="script.js"></script> <!-- Linka o documento javascript com o documento html -->
+</body>
+</html>

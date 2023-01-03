@@ -1,0 +1,89 @@
+/*body, elemento responsável por ser o container de tudo que é conteúdo do site*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right,
+      #051937, #004d7a, #008793, #00bf72);
+}
+
+/* Para class usamos . , para id usamos # */
+/*Estilizando class box*/
+.box{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 15px;
+    width: 20%; /*Largura 20 porcento*/ 
+}
+
+fieldset{
+    border: 3px solid #008793;
+}
+
+legend{
+    border: 1px solid #008793;
+    padding: 6px;
+    text-align: center;
+    background-color: #008793;
+    border-radius: 5px;
+    color: white;                                                                                                                                         
+}
+
+.inputBox{
+    position: relative;
+}
+
+.inputUser{
+    color: white;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none; /*tirar linha de fora*/
+    font-size: 15px;
+    width: 100%;
+    
+}
+
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none; /*Qualquer lugar clicado dentro do input executara a funcao*/
+    transition: .5s;
+}
+
+.inputUser:focus ~ .labelInput, /*Qnd focus no input ele ira executar uma funcao*/
+.inputUser:valid ~ .labelInput
+{ 
+    top: -18px;
+    font-size: 11px;
+    color: #008793;
+}
+
+#data_Nasc{ /*Os id's se chamam atraves do #*/
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+   
+}
+
+#submit{
+    background-image: linear-gradient(
+      #004d7a, #008793);
+      width: 100%;
+      border: none;
+      padding: 15px;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      border-radius: 8px;
+}
+
+#submit:hover{
+    background-image: linear-gradient(
+      #023958, #025158);
+}
